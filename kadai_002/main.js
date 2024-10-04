@@ -101,7 +101,7 @@ const gameOver = id => {
   // タイマー終了後に"タイムアップ！"と表示させる
   untypedfield.textContent = 'タイムアップ！';
 
-  // 1000ミリ秒（1秒）経過後に結果を表示させる
+  // 10ミリ秒経過後に結果を表示させる
   setTimeout(() => {
     // スコアをダイヤログで表示
     const result = confirm(rankCheck(score));
@@ -110,7 +110,7 @@ const gameOver = id => {
     if(result == true) {
       window.location.reload();
     }
-  }, 1000);
+  }, 10);
 };
 
 // カウントダウンタイマー
